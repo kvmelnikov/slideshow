@@ -16,7 +16,7 @@ body {
 
   font-family: AvenirNextLTPro-Bold;
 
-  /* MARK: стили для обычного режима */
+  //MARK: стили для обычного режима
 
   .fs_section {
     .navbar {
@@ -28,9 +28,7 @@ body {
     }
   }
 
-/* MARK: стили для full-screen */
-
-  .fs_section:-webkit-full-screen  {
+  .fs_section:-webkit-full-screen  { // MARK: стили для full-screen
     width: 100%;
     height: 100%;
     background: @black-bg;
@@ -39,8 +37,7 @@ body {
       display: none;
     }
 
-    /* MARK: navbar for full-screen start */
-    .navbar {
+    .navbar {   // MARK: navbar for full-screen start
       margin-bottom: 0px;
       display: block;
 
@@ -59,37 +56,57 @@ body {
         height: 90px;
         font: normal 14px/90px AvenirNextLTPro-Bold;
       }
-    }
-    /* MARK: navbar for full-screen end */
+    }     // MARK: navbar for full-screen end
 
-
-    /* MARK: right panel start */
-    .right-panel {
-      background-color: @panel-bg;
+    .right-panel { // MARK: right panel start
+      background-color: @bottom-bg;
       height: 100px;
       display: block;
       max-width: 410px;
+      min-width: 410px;
 
 
     .text-block {
       float: left!important;
       background-color: @panel-bg;
+      padding-left: 30px;
+      padding-right: 30px;
+      padding-top: 25px;
+      width: 372px;
+      overflow-y: auto;
+      max-height: 200px;
 
-      .btn-thumb {
-        display: inline-block;
-        width: 30px;
-        height: 30px;
-        background-image: url(thum_icon.png);
-        background-position: center center;
-        border-radius: 0;
-        border: 0;
-        background-color: transparent;
-      }
+       .btn-thumb {
+         display: inline-block;
+         width: 30px;
+         height: 30px;
+         background-image: url('../images/thum_icon.png');
+         background-position: center center;
+         border-radius: 0;
+         border: 0;
+         background-color: transparent;
+         margin-right: 10px;
+         &:focus {
+           outline: 0;
+         }
+        }
+        span {
+          color: #ffffff;
+          font: normal 12px/30px AvenirNextLTPro-Regular;
+          display: inline-block;
+        }
+        p {
+          color: #ffffff;
+        }
 
-      }
+        .first-text {
+          font: 18px/22px AvenirNextLTPro-Bold;
+          margin-top: 55px;
+        }
 
-    /* MARK: social-block start */
-    .social-block {
+    }
+
+    .social-block {   // MARK: social-block start
       list-style-type: none;
       display:block;
       cursor: pointer;
@@ -118,16 +135,10 @@ body {
       .google {
         .sprite(@google);
       }
-    }
-    /* MARK: social-block end */
-  }
-    // MARK: right panel end
+    }   // MARK: social-block end
 
+  } // MARK: right panel end
 
   }
-
-
-
-
 
 }
