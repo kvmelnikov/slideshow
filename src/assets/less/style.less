@@ -1,0 +1,133 @@
+@import "fonts.less";
+@import "variables.less";
+@import "sprite.less";
+
+
+
+body {
+
+  .btn.active.focus, .btn.active:focus, .btn.focus, .btn:active.focus, .btn:active:focus, .btn:focus {
+    outline: 0;
+  }
+
+  .btn {
+        border-radius: 0;
+  }
+
+  font-family: AvenirNextLTPro-Bold;
+
+  /* MARK: стили для обычного режима */
+
+  .fs_section {
+    .navbar {
+      display: none;
+    }
+
+    .right-panel {
+      display: none;
+    }
+  }
+
+/* MARK: стили для full-screen */
+
+  .fs_section:-webkit-full-screen  {
+    width: 100%;
+    height: 100%;
+    background: @black-bg;
+
+    .btn-success {
+      display: none;
+    }
+
+    /* MARK: navbar for full-screen start */
+    .navbar {
+      margin-bottom: 0px;
+      display: block;
+
+        .btn-close {
+          position: absolute;
+          right: 15px;
+          top: 16px;
+          width: 54px;
+          height: 54px;
+          background-color: @close-btn-bg;
+          opacity: 1;
+        }
+
+      .container {
+        background: @header-bg;
+        height: 90px;
+        font: normal 14px/90px AvenirNextLTPro-Bold;
+      }
+    }
+    /* MARK: navbar for full-screen end */
+
+
+    /* MARK: right panel start */
+    .right-panel {
+      background-color: @panel-bg;
+      height: 100px;
+      display: block;
+      max-width: 410px;
+
+
+    .text-block {
+      float: left!important;
+      background-color: @panel-bg;
+
+      .btn-thumb {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        background-image: url(thum_icon.png);
+        background-position: center center;
+        border-radius: 0;
+        border: 0;
+        background-color: transparent;
+      }
+
+      }
+
+    /* MARK: social-block start */
+    .social-block {
+      list-style-type: none;
+      display:block;
+      cursor: pointer;
+      padding-left: 0;
+      float: right!important;
+
+      li {
+        padding-top: 82px;
+        text-align: center;
+        color: white;
+        font: normal 10px/10px AvenirNextLTPro-Bold;
+      }
+
+      .pin {
+        .sprite(@pin);
+      }
+
+      .fb {
+        .sprite(@fb);
+      }
+
+      .tw {
+        .sprite(@tw);
+      }
+
+      .google {
+        .sprite(@google);
+      }
+    }
+    /* MARK: social-block end */
+  }
+    // MARK: right panel end
+
+
+  }
+
+
+
+
+
+}

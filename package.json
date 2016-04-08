@@ -1,0 +1,27 @@
+{
+  "name": "slideshow",
+  "version": "1.0.0",
+  "description": "test task",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kvmelnikov/slideshow.git"
+  },
+  "author": "Melnikov Kirill",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kvmelnikov/slideshow/issues"
+  },
+  "homepage": "https://github.com/kvmelnikov/slideshow#readme",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-less": "^3.0.5",
+    "gulp-stylus": "^2.3.1",
+    "gulp.spritesmith": "^6.2.1"
+  },
+  "devDependencies": {}
+}

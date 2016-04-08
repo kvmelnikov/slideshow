@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Slideshow</title>
+    <link rel="stylesheet" href="assets/vendors/bootstrap/dist/css/bootstrap.min.css" media="screen" title="no title" charset="utf-8">
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link rel="stylesheet" href="assets/css/ie10-viewport-bug-workaround.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="assets/css/style.css" media="screen" title="no title" charset="utf-8">
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="assets/js/ie-emulation-modes-warning.js"></script>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  </head>
+  <body>
+
+  <nav class="navbar navbar-inverse ">   <!--not fullscreen start-->
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Slideshow</a>
+      </div>
+    </div>
+  </nav> <!--/.nav-collapse -->
+
+  <div class="container">
+   <div class="starter-template text-center">
+     <h1>Welcome to the slideshow</h1>
+     <p class="lead">Slide Show is made for the test task. Check performance, you can click on the Start Slideshow button.</p>
+   </div>
+ </div><!-- /.container -->  <!--not fullscreen -->
+
+  <div class="fs_section" id="fs_section"> <!-- fullscreen start-->
+      <nav class="navbar">
+        <div class="container text-center">
+          AD
+        </div>
+        <button type = "button" class ="btn btn-close" id = "close_btn"><img src="assets/images/close_btn.png" alt=""></button>
+      </nav> <!--/.nav-collapse -->
+      <button type = "button" class ="btn btn-success center-block" id = "toggle">Start Slideshow</button>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-8">
+            <div class="slide-show">
+            </div><!-- slide-show block -->
+          </div>
+          <div class="col-md-4">
+            <div class="right-panel pull-right">
+              <div class = "panel text-block">
+                <button type="button" name="button" class = " btn-thumb pull-left"></button>
+              </div>
+              <ul class="social-block">
+                <li class = "pin"><span>PIN</span></li>
+                <li class= "fb"><span>LIKE</span></li>
+                <li class ="tw"><span>TWEET</span></li>
+                <li class = "google"><span>+1</span></li>
+              </ul>
+            </div><!-- right-panel block -->
+          </div>
+        </div>
+      </div><!-- main-content fullscreen -->
+  </div> <!-- fullscreen end-->
+
+  <script src="assets/vendors/jquery/dist/jquery.min.js"></script>
+  <script src="assets/js/screenfull.js"></script>
+  <script type="text/javascript">
+  $(function () {
+    $('#close_btn').click(function () {
+      screenfull.exit();
+    });
+
+    $('#toggle').click(function () {
+      screenfull.toggle($('#fs_section')[0]);
+    });
+
+
+    // set the initial values
+    fullscreenchange();
+  });
+
+  </script>
+
+
+
+  </body>
+</html>

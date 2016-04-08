@@ -1,0 +1,25 @@
+{
+  "name": "slideshow",
+  "description": "test task",
+  "main": "index.js",
+  "authors": [
+    "Melnikov Kirill"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/kvmelnikov/slideshow",
+  "moduleType": [
+    "amd"
+  ],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-less": "^3.3.4",
+    "bootstrap": "^3.3.6"
+  }
+}
