@@ -74,6 +74,13 @@ body .btn:active:focus,
 body .btn:focus {
   outline: 0;
 }
+body .carousel-inner > .item > a > img,
+body .carousel-inner > .item > img,
+body .img-responsive,
+body .thumbnail a > img,
+body .thumbnail > img {
+  max-height: 816px;
+}
 body .wrapper {
   max-width: 1400px;
   margin: auto;
@@ -119,12 +126,6 @@ body .fs_section:-webkit-full-screen .navbar .container {
 body .fs_section:-webkit-full-screen .slide-show {
   background: #171717;
   height: 861px;
-}
-body .fs_section:-webkit-full-screen .slide-show .main-photo {
-  display: block;
-}
-body .fs_section:-webkit-full-screen .slide-show .main-photo:before {
-  content: 'adaffd';
 }
 body .fs_section:-webkit-full-screen .right-panel {
   background-color: #292929;
