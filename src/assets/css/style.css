@@ -66,9 +66,6 @@ This must be run when you have at least 2 sprites.
 
 .sprites(@spritesheet-sprites);
 */
-body {
-  font-family: AvenirNextLTPro-Bold;
-}
 body .btn.active.focus,
 body .btn.active:focus,
 body .btn.focus,
@@ -77,6 +74,10 @@ body .btn:active:focus,
 body .btn:focus {
   outline: 0;
 }
+body .wrapper {
+  max-width: 1400px;
+  margin: auto;
+}
 body .btn {
   border-radius: 0;
 }
@@ -84,6 +85,9 @@ body .fs_section .navbar {
   display: none;
 }
 body .fs_section .right-panel {
+  display: none;
+}
+body .fs_section .main-photo {
   display: none;
 }
 body .fs_section:-webkit-full-screen {
@@ -112,13 +116,22 @@ body .fs_section:-webkit-full-screen .navbar .container {
   height: 90px;
   font: normal 14px/90px AvenirNextLTPro-Bold;
 }
+body .fs_section:-webkit-full-screen .slide-show {
+  background: #171717;
+  height: 861px;
+}
+body .fs_section:-webkit-full-screen .slide-show .main-photo {
+  display: block;
+}
+body .fs_section:-webkit-full-screen .slide-show .main-photo:before {
+  content: 'adaffd';
+}
 body .fs_section:-webkit-full-screen .right-panel {
   background-color: #292929;
   height: 100px;
   display: block;
   width: 410px;
   height: 861px;
-  border-bottom: 1px solid #3d3d3d;
 }
 body .fs_section:-webkit-full-screen .right-panel .text-block {
   float: left!important;
@@ -212,4 +225,7 @@ body .fs_section:-webkit-full-screen .right-panel .white-square-block .square {
   background-color: white;
   height: 250px;
   font: 14px/250px AvenirNextLTPro-Bold;
+}
+body .fs_section:-webkit-full-screen .footer {
+  border-top: 1px solid #3d3d3d;
 }

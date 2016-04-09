@@ -8,21 +8,21 @@
     <meta name="author" content="">
     <title>Slide Show</title>
     <link rel="stylesheet" href="assets/vendors/bootstrap/dist/css/bootstrap.min.css" media="screen" title="no title" charset="utf-8">
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <!-- MARK: IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <link rel="stylesheet" href="assets/css/ie10-viewport-bug-workaround.css" media="screen" title="no title" charset="utf-8">
     <link rel="stylesheet" href="assets/css/style.css" media="screen" title="no title" charset="utf-8">
-    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
-    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <!-- MARK: Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!-- MARK:[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
     <script src="assets/js/ie-emulation-modes-warning.js"></script>
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
+    <!-- MARK: HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- MARK:[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
 
   <body>
-  <nav class="navbar navbar-inverse">   <!--not fullscreen start-->
+  <nav class="navbar navbar-inverse">   <!-- MARK:not fullscreen start-->
     <div class="container">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -34,28 +34,44 @@
         <a class="navbar-brand" href="#">Slide Show</a>
       </div>
     </div>
-  </nav> <!--/.nav-collapse -->
+  </nav> <!-- MARK:/.nav-collapse -->
 
   <div class="container">
    <div class="starter-template text-center">
      <h1>Welcome to the Slide Show</h1>
      <p class="lead">Slide Show is made for the test task. Check performance, you can click on the Start Slide Show button.</p>
    </div>
- </div><!-- /.container -->  <!--not fullscreen end -->
+ </div><!-- MARK: /.container -->  <!-- MARK:not fullscreen end -->
 
-  <div class="fs_section" id="fs_section"> <!-- fullscreen start-->
+  <div class="fs_section" id="fs_section"> <!-- MARK: fullscreen start-->
       <nav class="navbar">
         <div class="container text-center">
           AD
         </div>
         <button type = "button" class ="btn btn-close" id = "close_btn"><img src="assets/images/close_btn.png" alt="button close full-screen"></button>
-      </nav> <!--/.nav-collapse -->
+      </nav> <!-- MARK:/.nav-collapse -->
       <button type = "button" class ="btn btn-success center-block" id = "toggle">Start Slide Show</button>
-      <div class="container-fluid">
+      <div class="wrapper">
         <div class="row">
-          <div class="col-md-8 col-sm-12">
-            <div class="slide-show">
-            </div><!-- slide-show block -->
+          <div class="col-md-8 col-sm-12 slide-show"> <!-- MARK: slide-show block start-->
+            <div class="carousel" >
+              <!-- Wrapper for slides -->
+              <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                  <img src="assets/images/photo1.jpg" alt="..." class="center-block">
+                  <div class="carousel-caption">
+                    <img src="assets/images/pinterest.png" alt="">
+                  </div>
+                </div>
+              </div>
+                <!-- Controls -->
+                <a class="left carousel-control" href="#" >
+                  <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                </a>
+                <a class="right carousel-control" href="#">
+                  <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                </a>
+              </div>
           </div>
           <div class="col-md-4 col-sm-12">
             <div class="right-panel pull-right">
@@ -78,25 +94,31 @@
                 <p class="text-left third-text">
                   Photo: / Pascal Le Segretain/Getty Images
                 </p>
-              </div><!--text block end-->
+              </div><!-- MARK:text block end-->
               <ul class="social-block">
                 <li class = "pin"><span>PIN</span></li>
                 <li class= "fb"><span>LIKE</span></li>
                 <li class ="tw"><span>TWEET</span></li>
                 <li class = "google"><span>+1</span></li>
-              </ul><!--social block end -->
-              <div class="white-square-block"> <!-- white-square-block start -->
+              </ul><!-- MARK:social block end -->
+              <div class="white-square-block"> <!-- MARK: white-square-block start -->
                 <div class ="square text-center">AD</div>
-              </div> <!-- white-square-block end -->
-            </div><!-- right-panel block -->
+              </div> <!-- MARK: white-square-block end -->
+            </div><!-- MARK: right-panel block -->
           </div>
+        </div> <!-- MARK: slide-show block end-->
         </div>
-      </div><!-- main-content fullscreen -->
-  </div> <!-- fullscreen end-->
+      </div><!-- MARK: main-content fullscreen -->
+      <footer class="footer"> <!-- MARK: footer start -->
+          <div class = "wrapper">
+            <img src="assets/images/text-footer.png" alt="" class="text-left" />
+          </div>
+      </footer> <!-- MARK: footer end -->
+  </div> <!-- MARK: fullscreen end-->
 
   <script src="assets/vendors/jquery/dist/jquery.min.js"></script>
   <script src="assets/js/screenfull.js"></script>
-  <script type="text/javascript">
+    <script type="text/javascript">
   $(function () {
     $('#close_btn').click(function () {
       screenfull.exit();

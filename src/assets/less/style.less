@@ -5,19 +5,19 @@
 
 
 body {
-
   .btn.active.focus, .btn.active:focus, .btn.focus, .btn:active.focus, .btn:active:focus, .btn:focus {
     outline: 0;
+  }
+  .wrapper {
+    max-width: 1400px;
+    margin: auto;
   }
 
   .btn {
         border-radius: 0;
   }
 
-  font-family: AvenirNextLTPro-Bold;
-
   //MARK: стили для обычного режима
-
   .fs_section {
     .navbar {
       display: none;
@@ -26,12 +26,17 @@ body {
     .right-panel {
       display: none;
     }
+
+    .main-photo {
+      display: none;
+    }
   }
 
   .fs_section:-webkit-full-screen  { // MARK: стили для full-screen
     width: 100%;
     height: 100%;
     background: @black-bg;
+
 
     .btn-success {
       display: none;
@@ -58,13 +63,29 @@ body {
       }
     }     // MARK: navbar for full-screen end
 
+    .slide-show { // MARK: slide-show start
+      background: @black-bg;
+      height: @height-main-container;
+
+      .main-photo {
+        display: block;
+      }
+      .main-photo:before {
+        content:'adaffd';
+
+      }
+
+
+
+
+    } // MARK: slide-show end
+
     .right-panel { // MARK: right panel start
       background-color: @bottom-bg;
       height: 100px;
       display: block;
       width: 410px;
-      height: 861px;
-      border-bottom: 1px solid #3d3d3d;
+      height: @height-main-container;
 
     .text-block { // MARK: text-block start
       float: left!important;
@@ -112,7 +133,6 @@ body {
         .third-text {
           font: 11px/12px AvenirNextLTPro-Regular;
         }
-
 
 
     } // MARK: text-block end
@@ -166,6 +186,11 @@ body {
     } // MARK: white-square-block end
 
   } // MARK: right panel end
+
+  .footer { // MARK: footer start
+      border-top: 1px solid #3d3d3d;
+
+  } // MARK: footer end
 
   }
 
