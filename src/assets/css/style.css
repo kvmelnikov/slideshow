@@ -116,18 +116,18 @@ body .fs_section:-webkit-full-screen .right-panel {
   background-color: #292929;
   height: 100px;
   display: block;
-  max-width: 410px;
-  min-width: 410px;
+  width: 410px;
+  height: 861px;
+  border-bottom: 1px solid #3d3d3d;
 }
 body .fs_section:-webkit-full-screen .right-panel .text-block {
   float: left!important;
   background-color: #2f2f2f;
-  padding-left: 30px;
-  padding-right: 30px;
-  padding-top: 25px;
+  padding: 25px 35px 0 35px;
   width: 372px;
   overflow-y: auto;
-  max-height: 200px;
+  height: 540px;
+  border-bottom: 1px solid #1e1e1e;
 }
 body .fs_section:-webkit-full-screen .right-panel .text-block .btn-thumb {
   display: inline-block;
@@ -154,6 +154,14 @@ body .fs_section:-webkit-full-screen .right-panel .text-block p {
 body .fs_section:-webkit-full-screen .right-panel .text-block .first-text {
   font: 18px/22px AvenirNextLTPro-Bold;
   margin-top: 55px;
+  margin-bottom: 25px;
+}
+body .fs_section:-webkit-full-screen .right-panel .text-block .second-text {
+  font: 14px/22px AvenirNextLTPro-Regular;
+  margin-bottom: 25px;
+}
+body .fs_section:-webkit-full-screen .right-panel .text-block .third-text {
+  font: 11px/12px AvenirNextLTPro-Regular;
 }
 body .fs_section:-webkit-full-screen .right-panel .social-block {
   list-style-type: none;
@@ -191,4 +199,17 @@ body .fs_section:-webkit-full-screen .right-panel .social-block .google {
   background-position: -114px 0px;
   width: 37px;
   height: 107px;
+}
+body .fs_section:-webkit-full-screen .right-panel .white-square-block {
+  border-top: 1px solid #4f4f4f;
+  height: 320px;
+  width: 372px;
+  background-color: #2f2f2f;
+  margin-top: 540px;
+  padding: 37px 35px 30px 35px;
+}
+body .fs_section:-webkit-full-screen .right-panel .white-square-block .square {
+  background-color: white;
+  height: 250px;
+  font: 14px/250px AvenirNextLTPro-Bold;
 }

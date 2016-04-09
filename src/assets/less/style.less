@@ -62,19 +62,18 @@ body {
       background-color: @bottom-bg;
       height: 100px;
       display: block;
-      max-width: 410px;
-      min-width: 410px;
+      width: 410px;
+      height: 861px;
+      border-bottom: 1px solid #3d3d3d;
 
-
-    .text-block {
+    .text-block { // MARK: text-block start
       float: left!important;
       background-color: @panel-bg;
-      padding-left: 30px;
-      padding-right: 30px;
-      padding-top: 25px;
+      padding: 25px 35px 0 35px;
       width: 372px;
       overflow-y: auto;
-      max-height: 200px;
+      height: 540px;
+      border-bottom: 1px solid #1e1e1e;
 
        .btn-thumb {
          display: inline-block;
@@ -102,9 +101,21 @@ body {
         .first-text {
           font: 18px/22px AvenirNextLTPro-Bold;
           margin-top: 55px;
+          margin-bottom: 25px;
         }
 
-    }
+        .second-text {
+          font: 14px/22px AvenirNextLTPro-Regular;
+          margin-bottom: 25px;
+        }
+
+        .third-text {
+          font: 11px/12px AvenirNextLTPro-Regular;
+        }
+
+
+
+    } // MARK: text-block end
 
     .social-block {   // MARK: social-block start
       list-style-type: none;
@@ -136,6 +147,23 @@ body {
         .sprite(@google);
       }
     }   // MARK: social-block end
+
+    .white-square-block { // MARK: white-square-block start
+      border-top: 1px solid #4f4f4f;
+      height: 320px;
+      width: 372px;
+      background-color: @panel-bg;
+      margin-top: 540px;
+      padding: 37px 35px 30px 35px;
+
+      .square {
+        background-color: white;
+        height: 250px;
+        font: 14px/250px AvenirNextLTPro-Bold;
+
+      }
+
+    } // MARK: white-square-block end
 
   } // MARK: right panel end
 
