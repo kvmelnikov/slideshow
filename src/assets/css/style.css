@@ -66,6 +66,57 @@ This must be run when you have at least 2 sprites.
 
 .sprites(@spritesheet-sprites);
 */
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  html body .fs_section:-webkit-full-screen .right-panel {
+    height: 657px;
+  }
+  html body .fs_section:-webkit-full-screen .right-panel .main-block {
+    height: 657px;
+    width: 90%;
+  }
+  html body .fs_section:-webkit-full-screen .right-panel .main-block {
+    height: 335px;
+  }
+  html body .fs_section:-webkit-full-screen .slide-show {
+    height: 657px;
+  }
+  html body .fs_section:-webkit-full-screen .slide-show .carousel-inner > .item > a > img,
+  html body .fs_section:-webkit-full-screen .slide-show .carousel-inner > .item > img,
+  html body .fs_section:-webkit-full-screen .slide-show .img-responsive,
+  html body .fs_section:-webkit-full-screen .slide-show .thumbnail a > img,
+  html body .fs_section:-webkit-full-screen .slide-show .thumbnail > img {
+    max-width: 72%;
+  }
+  html body .fs_section:-webkit-full-screen .slide-show .carousel {
+    margin-top: 0px;
+  }
+}
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  html body .fs_section:-webkit-full-screen .right-panel {
+    height: 86.1%;
+  }
+  html body .fs_section:-webkit-full-screen .right-panel .main-block {
+    height: 62.6450116009281%;
+    width: 90%;
+  }
+  html body .fs_section:-webkit-full-screen .slide-show {
+    height: 86.1%;
+  }
+  html body .fs_section:-webkit-full-screen .slide-show .carousel-inner > .item > a > img,
+  html body .fs_section:-webkit-full-screen .slide-show .carousel-inner > .item > img,
+  html body .fs_section:-webkit-full-screen .slide-show .img-responsive,
+  html body .fs_section:-webkit-full-screen .slide-show .thumbnail a > img,
+  html body .fs_section:-webkit-full-screen .slide-show .thumbnail > img {
+    max-width: 72%;
+  }
+  html body .fs_section:-webkit-full-screen .slide-show .carousel {
+    margin-top: 25px;
+  }
+}
 body .btn.active.focus,
 body .btn.active:focus,
 body .btn.focus,
@@ -82,11 +133,15 @@ body .thumbnail > img {
   max-height: 816px;
 }
 body .wrapper {
-  max-width: 1400px;
+  max-width: 100%;
   margin: auto;
+  position: relative;
 }
 body .btn {
   border-radius: 0;
+}
+body .carousel {
+  display: none;
 }
 body .fs_section .navbar {
   display: none;
@@ -101,6 +156,8 @@ body .fs_section:-webkit-full-screen {
   width: 100%;
   height: 100%;
   background: #171717;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 body .fs_section:-webkit-full-screen .btn-success {
   display: none;
@@ -108,42 +165,92 @@ body .fs_section:-webkit-full-screen .btn-success {
 body .fs_section:-webkit-full-screen .navbar {
   margin-bottom: 0px;
   display: block;
+  height: 9%;
 }
-body .fs_section:-webkit-full-screen .navbar .btn-close {
-  position: absolute;
-  right: 15px;
-  top: 16px;
-  width: 54px;
-  height: 54px;
-  background-color: #353535;
-  opacity: 1;
+body .fs_section:-webkit-full-screen .navbar .wrapper {
+  max-width: 100%;
+  height: 100%;
 }
-body .fs_section:-webkit-full-screen .navbar .container {
+body .fs_section:-webkit-full-screen .navbar .wrapper .header {
   background: #7f7f7f;
-  height: 90px;
-  font: normal 14px/90px AvenirNextLTPro-Bold;
+  margin: auto;
+  width: 52%;
+  height: 100%;
+  font: normal 0.5em/1em AvenirNextLTPro-Bold;
+}
+body .fs_section:-webkit-full-screen .navbar .wrapper .btn-close {
+  position: absolute;
+  right: 1.28571428571429%;
+  top: 17.7777777777778%;
+  width: 3.85714285714286%;
+  height: 60%;
+  min-width: 54px;
+  min-height: 54px;
+  background: url('../images/close-btn.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: .5;
+  z-index: 100;
+}
+body .fs_section:-webkit-full-screen .wrapper {
+  height: 86.1%;
+}
+body .fs_section:-webkit-full-screen .wrapper .row {
+  height: 100%;
 }
 body .fs_section:-webkit-full-screen .slide-show {
   background: #171717;
-  height: 861px;
 }
-body .fs_section:-webkit-full-screen .right-panel {
-  background-color: #292929;
-  height: 100px;
+body .fs_section:-webkit-full-screen .slide-show .carousel {
+  margin-top: 25px;
   display: block;
-  width: 410px;
-  height: 861px;
 }
-body .fs_section:-webkit-full-screen .right-panel .text-block {
+body .fs_section:-webkit-full-screen .slide-show .carousel .carousel-control {
+  width: 57px;
+}
+body .fs_section:-webkit-full-screen .slide-show .carousel .carousel-control.left {
+  background: url('../images/left-arrow.png');
+  background-repeat: no-repeat;
+  background-position: center left;
+}
+body .fs_section:-webkit-full-screen .slide-show .carousel .carousel-control.right {
+  background: url('../images/right-arrow.png');
+  background-repeat: no-repeat;
+  background-position: center right;
+}
+body .fs_section:-webkit-full-screen .panel-wrapper {
+  height: 100%;
+}
+body .fs_section:-webkit-full-screen .panel-wrapper .right-panel {
+  background-color: #292929;
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+body .fs_section:-webkit-full-screen .panel-wrapper .right-panel .main-block {
   float: left!important;
   background-color: #2f2f2f;
-  padding: 25px 35px 0 35px;
-  width: 372px;
-  overflow-y: auto;
-  height: 540px;
-  border-bottom: 1px solid #1e1e1e;
+  width: 90%;
+  height: 100%;
+  position: relative;
 }
-body .fs_section:-webkit-full-screen .right-panel .text-block .btn-thumb {
+body .fs_section:-webkit-full-screen .panel-wrapper .right-panel .main-block p {
+  color: #ffffff;
+}
+body .fs_section:-webkit-full-screen .panel-wrapper .right-panel .main-block span {
+  color: #ffffff;
+  font: normal 12px/30px AvenirNextLTPro-Regular;
+  display: inline-block;
+}
+body .fs_section:-webkit-full-screen .panel-wrapper .right-panel .main-block .thumb-block {
+  position: absolute;
+  top: 3.3%;
+  left: 8%;
+  right: 8%;
+  height: 7.7%;
+}
+body .fs_section:-webkit-full-screen .panel-wrapper .right-panel .main-block .thumb-block .btn-thumb {
   display: inline-block;
   width: 30px;
   height: 30px;
@@ -154,75 +261,82 @@ body .fs_section:-webkit-full-screen .right-panel .text-block .btn-thumb {
   background-color: transparent;
   margin-right: 10px;
 }
-body .fs_section:-webkit-full-screen .right-panel .text-block .btn-thumb:focus {
+body .fs_section:-webkit-full-screen .panel-wrapper .right-panel .main-block .thumb-block .btn-thumb:focus {
   outline: 0;
 }
-body .fs_section:-webkit-full-screen .right-panel .text-block span {
-  color: #ffffff;
-  font: normal 12px/30px AvenirNextLTPro-Regular;
-  display: inline-block;
+body .fs_section:-webkit-full-screen .panel-wrapper .right-panel .main-block .text-block {
+  border-bottom: 1px solid #1e1e1e;
+  height: 62.7%;
 }
-body .fs_section:-webkit-full-screen .right-panel .text-block p {
-  color: #ffffff;
-}
-body .fs_section:-webkit-full-screen .right-panel .text-block .first-text {
+body .fs_section:-webkit-full-screen .panel-wrapper .right-panel .main-block .text-block .first-text {
   font: 18px/22px AvenirNextLTPro-Bold;
-  margin-top: 55px;
-  margin-bottom: 25px;
+  position: absolute;
+  top: 9%;
+  left: 8%;
+  right: 8%;
 }
-body .fs_section:-webkit-full-screen .right-panel .text-block .second-text {
+body .fs_section:-webkit-full-screen .panel-wrapper .right-panel .main-block .text-block .second-text {
   font: 14px/22px AvenirNextLTPro-Regular;
-  margin-bottom: 25px;
+  position: absolute;
+  top: 16.6%;
+  left: 8%;
+  right: 8%;
+  max-height: 140px;
+  overflow-y: auto;
 }
-body .fs_section:-webkit-full-screen .right-panel .text-block .third-text {
+body .fs_section:-webkit-full-screen .panel-wrapper .right-panel .main-block .text-block .third-text {
   font: 11px/12px AvenirNextLTPro-Regular;
+  position: absolute;
+  top: 34.37%;
+  left: 8%;
+  right: 8%;
 }
-body .fs_section:-webkit-full-screen .right-panel .social-block {
+body .fs_section:-webkit-full-screen .panel-wrapper .right-panel .social-block {
   list-style-type: none;
   display: block;
   cursor: pointer;
   padding-left: 0;
   float: right!important;
 }
-body .fs_section:-webkit-full-screen .right-panel .social-block li {
+body .fs_section:-webkit-full-screen .panel-wrapper .right-panel .social-block li {
   padding-top: 82px;
   text-align: center;
   color: white;
   font: normal 10px/10px AvenirNextLTPro-Bold;
+  margin-top: -2px;
 }
-body .fs_section:-webkit-full-screen .right-panel .social-block .pin {
+body .fs_section:-webkit-full-screen .panel-wrapper .right-panel .social-block .pin {
+  margin-top: 0px;
   background-image: url(../images/sprite.png);
-  background-position: 0px 0px;
-  width: 38px;
-  height: 110px;
+  background-position: 0px -140px;
+  width: 37px;
+  height: 106px;
 }
-body .fs_section:-webkit-full-screen .right-panel .social-block .fb {
+body .fs_section:-webkit-full-screen .panel-wrapper .right-panel .social-block .fb {
   background-image: url(../images/sprite.png);
-  background-position: -38px 0px;
-  width: 38px;
-  height: 108px;
+  background-position: -218px 0px;
+  width: 37px;
+  height: 106px;
 }
-body .fs_section:-webkit-full-screen .right-panel .social-block .tw {
+body .fs_section:-webkit-full-screen .panel-wrapper .right-panel .social-block .tw {
   background-image: url(../images/sprite.png);
-  background-position: -76px 0px;
-  width: 38px;
-  height: 108px;
+  background-position: -181px 0px;
+  width: 37px;
+  height: 106px;
 }
-body .fs_section:-webkit-full-screen .right-panel .social-block .google {
+body .fs_section:-webkit-full-screen .panel-wrapper .right-panel .social-block .google {
   background-image: url(../images/sprite.png);
-  background-position: -114px 0px;
+  background-position: -144px 0px;
   width: 37px;
   height: 107px;
 }
-body .fs_section:-webkit-full-screen .right-panel .white-square-block {
+body .fs_section:-webkit-full-screen .panel-wrapper .right-panel .white-square-block {
   border-top: 1px solid #4f4f4f;
-  height: 320px;
-  width: 372px;
   background-color: #2f2f2f;
-  margin-top: 540px;
-  padding: 37px 35px 30px 35px;
+  height: 37.3549883990719%;
+  padding: 0 8%;
 }
-body .fs_section:-webkit-full-screen .right-panel .white-square-block .square {
+body .fs_section:-webkit-full-screen .panel-wrapper .right-panel .white-square-block .square {
   background-color: white;
   height: 250px;
   font: 14px/250px AvenirNextLTPro-Bold;

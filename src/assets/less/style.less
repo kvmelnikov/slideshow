@@ -1,6 +1,7 @@
 @import "fonts.less";
 @import "variables.less";
 @import "sprite.less";
+@import "media.less";
 
 
 
@@ -16,12 +17,17 @@ body {
   // orewrtite bootstrpap css end
 
   .wrapper {
-    max-width: 1400px;
+    max-width: 100%;
     margin: auto;
+    position: relative;
   }
 
   .btn {
     border-radius: 0;
+  }
+
+  .carousel {
+    display: none;
   }
 
   //MARK: стили для обычного режима
@@ -43,6 +49,9 @@ body {
     width: 100%;
     height: 100%;
     background: @black-bg;
+    overflow-y: auto;
+    overflow-x: hidden;
+
 
 
     .btn-success {
@@ -52,45 +61,102 @@ body {
     .navbar {   // MARK: navbar for full-screen start
       margin-bottom: 0px;
       display: block;
+      height: 9%;
+      .wrapper {
+        max-width: 100%;
+        height: 100%;
+              .header {
+                background: @header-bg;
+                margin: auto;
+                width: 52%;
+                height: 100%;
+                font: normal 0.5em/1em AvenirNextLTPro-Bold;
+              }
 
-        .btn-close {
-          position: absolute;
-          right: 15px;
-          top: 16px;
-          width: 54px;
-          height: 54px;
-          background-color: @close-btn-bg;
-          opacity: 1;
-        }
-
-      .container {
-        background: @header-bg;
-        height: 90px;
-        font: normal 14px/90px AvenirNextLTPro-Bold;
+              .btn-close {
+                position: absolute;
+                right: 1.28571428571429%;
+                top: 17.7777777777778%;
+                width: 3.85714285714286%;
+                height: 60%;
+                min-width: 54px;
+                min-height: 54px;
+                background: url('../images/close-btn.png');
+                background-size: contain;
+                background-repeat: no-repeat;
+                opacity: .5;
+                z-index: 100;
+              }
       }
+
     }     // MARK: navbar for full-screen end
+
+    .wrapper {
+      height: 86.1%;
+      .row {
+        height: 100%;
+
+      }
+    }
 
     .slide-show { // MARK: slide-show start
       background: @black-bg;
-      height: @height-main-container;
+
+      .carousel {
+        margin-top: 25px;
+        display: block;
+
+        .carousel-control {
+          width: 57px;
+
+          &.left {
+            background: url('../images/left-arrow.png');
+            background-repeat: no-repeat;
+            background-position: center left;
+          }
+
+          &.right {
+            background: url('../images/right-arrow.png');
+            background-repeat: no-repeat;
+            background-position: center right;
+          }
+        }
+      }
 
     } // MARK: slide-show end
+    .panel-wrapper {
+      height: 100%;
+
 
     .right-panel { // MARK: right panel start
       background-color: @bottom-bg;
-      height: 100px;
       display: block;
-      width: 410px;
-      height: @height-main-container;
+      position: relative;
+      width: 100%;
+      height: 100%;
 
-    .text-block { // MARK: text-block start
+    .main-block { // MARK: main-block start
       float: left!important;
       background-color: @panel-bg;
-      padding: 25px 35px 0 35px;
-      width: 372px;
-      overflow-y: auto;
-      height: 540px;
-      border-bottom: 1px solid #1e1e1e;
+      width: 90%;
+      height: 100%;
+      position: relative;
+
+      p {
+        color: #ffffff;
+      }
+      span {
+        color: #ffffff;
+        font: normal 12px/30px AvenirNextLTPro-Regular;
+        display: inline-block;
+      }
+
+      .thumb-block {
+        position: absolute;
+        top: 3.3%;
+        left: 8%;
+        right: 8%;
+        height: 7.7%;
 
        .btn-thumb {
          display: inline-block;
@@ -106,32 +172,44 @@ body {
            outline: 0;
          }
         }
-        span {
-          color: #ffffff;
-          font: normal 12px/30px AvenirNextLTPro-Regular;
-          display: inline-block;
-        }
-        p {
-          color: #ffffff;
-        }
+      }
+
+        .text-block {
+          border-bottom: 1px solid #1e1e1e;
+          height: 62.7%;
+
 
         .first-text {
           font: 18px/22px AvenirNextLTPro-Bold;
-          margin-top: 55px;
-          margin-bottom: 25px;
+          position: absolute;
+          top: 9%;
+          left: 8%;
+          right:8%;
+
         }
 
         .second-text {
           font: 14px/22px AvenirNextLTPro-Regular;
-          margin-bottom: 25px;
+          position: absolute;
+          top: 16.6%;
+          left: 8%;
+          right:8%;
+          max-height: 140px;
+          overflow-y: auto;
+
         }
 
         .third-text {
           font: 11px/12px AvenirNextLTPro-Regular;
+          position: absolute;
+          top: 34.37%;
+          left: 8%;
+          right:8%;
         }
+      }
 
 
-    } // MARK: text-block end
+    } // MARK: main-block end
 
     .social-block {   // MARK: social-block start
       list-style-type: none;
@@ -145,32 +223,36 @@ body {
         text-align: center;
         color: white;
         font: normal 10px/10px AvenirNextLTPro-Bold;
+        margin-top: -2px;
       }
 
       .pin {
-        .sprite(@pin);
+        margin-top: 0px;
+        .sprite(@pin-panel);
+
       }
 
       .fb {
-        .sprite(@fb);
+        .sprite(@fb-panel);
+
       }
 
       .tw {
-        .sprite(@tw);
+        .sprite(@tw-panel);
+
       }
 
       .google {
-        .sprite(@google);
+        .sprite(@g-panel);
+
       }
     }   // MARK: social-block end
 
     .white-square-block { // MARK: white-square-block start
       border-top: 1px solid #4f4f4f;
-      height: 320px;
-      width: 372px;
       background-color: @panel-bg;
-      margin-top: 540px;
-      padding: 37px 35px 30px 35px;
+      height: 37.3549883990719%;
+      padding: 0 8%;
 
       .square {
         background-color: white;
@@ -181,7 +263,7 @@ body {
 
     } // MARK: white-square-block end
 
-  } // MARK: right panel end
+  }} // MARK: right panel end
 
   .footer { // MARK: footer start
       border-top: 1px solid #3d3d3d;

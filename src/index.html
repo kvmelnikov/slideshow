@@ -25,12 +25,6 @@
   <nav class="navbar navbar-inverse">   <!-- MARK:not fullscreen start-->
     <div class="container">
       <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
         <a class="navbar-brand" href="#">Slide Show</a>
       </div>
     </div>
@@ -45,65 +39,66 @@
 
   <div class="fs_section" id="fs_section"> <!-- MARK: fullscreen start-->
       <nav class="navbar">
-        <div class="container text-center">
-          AD
+        <div class="wrapper">
+          <div class="header">
+            AD
+          </div>
+        <button type = "button" class ="btn btn-close" id = "close_btn"></button>
         </div>
-        <button type = "button" class ="btn btn-close" id = "close_btn"><img src="assets/images/close_btn.png" alt="button close full-screen"></button>
+
       </nav> <!-- MARK:/.nav-collapse -->
       <button type = "button" class ="btn btn-success center-block" id = "toggle">Start Slide Show</button>
       <div class="wrapper">
         <div class="row">
-          <div class="col-md-8 col-sm-12 slide-show"> <!-- MARK: slide-show block start-->
+          <div class="col-lg-8 col-md-7 col-sm-12 slide-show"> <!-- MARK: slide-show block start-->
             <div class="carousel" >
               <!-- Wrapper for slides -->
               <div class="carousel-inner" role="listbox">
                 <div class="item active">
-                  <img src="assets/images/photo2.jpg" alt="..." class="center-block">
+                  <!-- <img src="assets/images/photo1.jpg" alt="..." class="center-block"> -->
                   <div class="carousel-caption">
                     <img src="assets/images/pinterest.png" alt="">
                   </div>
                 </div>
               </div>
                 <!-- Controls -->
-                <a class="left carousel-control" href="#" >
-                  <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                </a>
-                <a class="right carousel-control" href="#">
-                  <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                </a>
+                <a class="left carousel-control" href="#" ></a>
+                <a class="right carousel-control" href="#"></a>
               </div>
           </div>
-          <div class="col-md-4 col-sm-12">
+          <div class="col-lg-4 col-md-5 col-sm-12 panel-wrapper">
             <div class="right-panel pull-right">
-              <div class = "text-block">
-                <div>
-                <button type="button" name="button" class = " btn-thumb pull-left"></button>
-                <span class="pull-left">Thumbnails</span>
-                <span class="pull-right">1/10</span>
+              <div class = "main-block"> <!-- MARK:main-block start-->
+                <div  class= "thumb-block">
+                  <button type="button" name="button" class = " btn-thumb pull-left"></button>
+                  <span class="pull-left">Thumbnails</span>
+                  <span class="pull-right">1/10</span>
                 </div>
-                <p class="text-left first-text">
-                  Fake It Until You Make It: Eyes That
-                  Pop And Lips That Attracts
-                </p>
-                <p class="text-left second-text">
-                   Through all of our handy beauty products,
-                   we enhance and improve upon our features that we were born with,
-                   and play up the ones that we wish had a bit more prominence.
-                   So that saying “fake it until you make it” can really ring true in the beauty world
-                </p>
-                <p class="text-left third-text">
-                  Photo: / Pascal Le Segretain/Getty Images
-                </p>
-              </div><!-- MARK:text block end-->
+                <div class="text-block">
+                  <p class="text-left first-text">
+                    Fake It Until You Make It: Eyes That
+                    Pop And Lips That Attracts
+                  </p>
+                  <p class="text-left second-text">
+                     Through all of our handy beauty products,
+                     we enhance and improve upon our features that we were born with,
+                     and play up the ones that we wish had a bit more prominence.
+                     So that saying “fake it until you make it” can really ring true in the beauty world
+                  </p>
+                  <p class="text-left third-text">
+                    Photo: / Pascal Le Segretain/Getty Images
+                  </p>
+                </div>
+                <div class="white-square-block"> <!-- MARK: white-square-block start -->
+
+                </div> <!-- MARK: white-square-block end -->
+              </div><!-- MARK:main-block end-->
               <ul class="social-block">
-                <li class = "pin"><span>PIN</span></li>
-                <li class= "fb"><span>LIKE</span></li>
-                <li class ="tw"><span>TWEET</span></li>
-                <li class = "google"><span>+1</span></li>
+                <li class = "pin"><a href="#"></a></li>
+                <li class= "fb"><a href="#"></a></li>
+                <li class ="tw"><a href="#"></a></li>
+                <li class = "google"><a href="#"></a></li>
               </ul><!-- MARK:social block end -->
-              <div class="white-square-block"> <!-- MARK: white-square-block start -->
-                <div class ="square text-center">AD</div>
-              </div> <!-- MARK: white-square-block end -->
             </div><!-- MARK: right-panel block -->
           </div>
         </div> <!-- MARK: slide-show block end-->
