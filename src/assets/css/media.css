@@ -3,24 +3,22 @@
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) {
   html body .fs_section:-webkit-full-screen .right-panel {
-    height: 657px;
+    height: 86.1%;
   }
   html body .fs_section:-webkit-full-screen .right-panel .main-block {
-    height: 657px;
+    height: 62.6450116009281%;
     width: 90%;
   }
-  html body .fs_section:-webkit-full-screen .right-panel .main-block {
-    height: 335px;
-  }
   html body .fs_section:-webkit-full-screen .slide-show {
-    height: 657px;
+    padding-left: 45px;
+    height: 100%;
   }
   html body .fs_section:-webkit-full-screen .slide-show .carousel-inner > .item > a > img,
   html body .fs_section:-webkit-full-screen .slide-show .carousel-inner > .item > img,
   html body .fs_section:-webkit-full-screen .slide-show .img-responsive,
   html body .fs_section:-webkit-full-screen .slide-show .thumbnail a > img,
   html body .fs_section:-webkit-full-screen .slide-show .thumbnail > img {
-    max-width: 72%;
+    max-width: 100%;
   }
   html body .fs_section:-webkit-full-screen .slide-show .carousel {
     margin-top: 0px;
@@ -36,14 +34,15 @@
     width: 90%;
   }
   html body .fs_section:-webkit-full-screen .slide-show {
-    height: 86.1%;
+    padding-left: 45px;
+    height: 100%;
   }
   html body .fs_section:-webkit-full-screen .slide-show .carousel-inner > .item > a > img,
   html body .fs_section:-webkit-full-screen .slide-show .carousel-inner > .item > img,
   html body .fs_section:-webkit-full-screen .slide-show .img-responsive,
   html body .fs_section:-webkit-full-screen .slide-show .thumbnail a > img,
   html body .fs_section:-webkit-full-screen .slide-show .thumbnail > img {
-    max-width: 72%;
+    max-width: 100%;
   }
   html body .fs_section:-webkit-full-screen .slide-show .carousel {
     margin-top: 25px;

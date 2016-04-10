@@ -71,24 +71,22 @@ This must be run when you have at least 2 sprites.
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) {
   html body .fs_section:-webkit-full-screen .right-panel {
-    height: 657px;
+    height: 86.1%;
   }
   html body .fs_section:-webkit-full-screen .right-panel .main-block {
-    height: 657px;
+    height: 62.6450116009281%;
     width: 90%;
   }
-  html body .fs_section:-webkit-full-screen .right-panel .main-block {
-    height: 335px;
-  }
   html body .fs_section:-webkit-full-screen .slide-show {
-    height: 657px;
+    padding-left: 45px;
+    height: 100%;
   }
   html body .fs_section:-webkit-full-screen .slide-show .carousel-inner > .item > a > img,
   html body .fs_section:-webkit-full-screen .slide-show .carousel-inner > .item > img,
   html body .fs_section:-webkit-full-screen .slide-show .img-responsive,
   html body .fs_section:-webkit-full-screen .slide-show .thumbnail a > img,
   html body .fs_section:-webkit-full-screen .slide-show .thumbnail > img {
-    max-width: 72%;
+    max-width: 100%;
   }
   html body .fs_section:-webkit-full-screen .slide-show .carousel {
     margin-top: 0px;
@@ -104,14 +102,15 @@ This must be run when you have at least 2 sprites.
     width: 90%;
   }
   html body .fs_section:-webkit-full-screen .slide-show {
-    height: 86.1%;
+    padding-left: 45px;
+    height: 100%;
   }
   html body .fs_section:-webkit-full-screen .slide-show .carousel-inner > .item > a > img,
   html body .fs_section:-webkit-full-screen .slide-show .carousel-inner > .item > img,
   html body .fs_section:-webkit-full-screen .slide-show .img-responsive,
   html body .fs_section:-webkit-full-screen .slide-show .thumbnail a > img,
   html body .fs_section:-webkit-full-screen .slide-show .thumbnail > img {
-    max-width: 72%;
+    max-width: 100%;
   }
   html body .fs_section:-webkit-full-screen .slide-show .carousel {
     margin-top: 25px;
@@ -130,7 +129,12 @@ body .carousel-inner > .item > img,
 body .img-responsive,
 body .thumbnail a > img,
 body .thumbnail > img {
-  max-height: 816px;
+  max-height: 100%;
+}
+body .carousel-inner > .item.active,
+body .carousel-inner > .item.next.left,
+body .carousel-inner > .item.prev.right {
+  height: 100%;
 }
 body .wrapper {
   max-width: 100%;
@@ -202,8 +206,11 @@ body .fs_section:-webkit-full-screen .slide-show {
   background: #171717;
 }
 body .fs_section:-webkit-full-screen .slide-show .carousel {
-  margin-top: 25px;
+  height: 100%;
   display: block;
+}
+body .fs_section:-webkit-full-screen .slide-show .carousel .carousel-inner {
+  height: 100%;
 }
 body .fs_section:-webkit-full-screen .slide-show .carousel .carousel-control {
   width: 57px;

@@ -12,7 +12,10 @@ body {
   }
 
   .carousel-inner>.item>a>img, .carousel-inner>.item>img, .img-responsive, .thumbnail a>img, .thumbnail>img {
-    max-height: 816px;
+    max-height: 100%;
+  }
+  .carousel-inner>.item.active, .carousel-inner>.item.next.left, .carousel-inner>.item.prev.right {
+    height: 100%;
   }
   // orewrtite bootstrpap css end
 
@@ -51,6 +54,7 @@ body {
     background: @black-bg;
     overflow-y: auto;
     overflow-x: hidden;
+
 
 
 
@@ -103,8 +107,13 @@ body {
       background: @black-bg;
 
       .carousel {
-        margin-top: 25px;
+        height: 100%;
         display: block;
+
+        .carousel-inner {
+          height: 100%;
+        }
+
 
         .carousel-control {
           width: 57px;
