@@ -1,25 +1,43 @@
 /* Extra small devices (phones, less than 768px) */
 /* No media query since this is the default in Bootstrap */
 @media (max-width: 768px) {
+  html body .fs_section:-webkit-full-screen .wrapper {
+    height: 100%;
+  }
+  html body .fs_section:-webkit-full-screen .slide-show .carousel .carousel-control.left {
+    left: 5%;
+  }
+  html body .fs_section:-webkit-full-screen .slide-show .carousel .carousel-control.right {
+    right: 5%;
+  }
   html body .fs_section:-webkit-full-screen .panel-wrapper .right-panel .main-block {
     width: 100%;
   }
-  html body .carousel-inner > .item > a > img,
-  html body .carousel-inner > .item > img,
-  html body .img-responsive,
-  html body .thumbnail a > img,
-  html body .thumbnail > img {
+  html body .fs_section:-webkit-full-screen .carousel-inner > .item > a > img,
+  html body .fs_section:-webkit-full-screen .carousel-inner > .item > img,
+  html body .fs_section:-webkit-full-screen .img-responsive,
+  html body .fs_section:-webkit-full-screen .thumbnail a > img,
+  html body .fs_section:-webkit-full-screen .thumbnail > img {
     max-height: 75%;
   }
-  html body .carousel-inner > .item > a > img,
-  html body .carousel-inner > .item > img,
-  html body .img-responsive,
-  html body .thumbnail a > img,
-  html body .thumbnail > img {
+  html body .fs_section:-webkit-full-screen .carousel-inner > .item > a > img,
+  html body .fs_section:-webkit-full-screen .carousel-inner > .item > img,
+  html body .fs_section:-webkit-full-screen .img-responsive,
+  html body .fs_section:-webkit-full-screen .thumbnail a > img,
+  html body .fs_section:-webkit-full-screen .thumbnail > img {
     max-width: 86%;
   }
 }
 @media (min-width: 768px) {
+  html body .fs_section:-webkit-full-screen .wrapper {
+    height: 100%;
+  }
+  html body .fs_section:-webkit-full-screen .slide-show .carousel .carousel-control.left {
+    left: 10%;
+  }
+  html body .fs_section:-webkit-full-screen .slide-show .carousel .carousel-control.right {
+    right: 10%;
+  }
   html body .fs_section:-webkit-full-screen .panel-wrapper .right-panel .main-block {
     width: 100%;
   }
@@ -40,6 +58,15 @@
 }
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) {
+  html body .fs_section:-webkit-full-screen .wrapper {
+    height: 86.1%;
+  }
+  html body .fs_section:-webkit-full-screen .slide-show .carousel .carousel-control.left {
+    left: 0%;
+  }
+  html body .fs_section:-webkit-full-screen .slide-show .carousel .carousel-control.right {
+    right: 0%;
+  }
   html body .fs_section:-webkit-full-screen .panel-wrapper .right-panel .main-block {
     width: 90%;
   }
@@ -64,6 +91,9 @@
 }
 /* Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
+  html body .fs_section:-webkit-full-screen .wrapper {
+    height: 86.1%;
+  }
   html body .fs_section:-webkit-full-screen .panel-wrapper .right-panel .main-block {
     width: 90%;
   }

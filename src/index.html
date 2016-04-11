@@ -48,16 +48,40 @@
       </nav> <!-- MARK:/.nav-collapse -->
       <button type = "button" class ="btn btn-success center-block" id = "toggle">Start Slide Show</button>
       <div class="wrapper">
+        <div class="f" style="
+        height: 10%;
+        width: 100%;
+        /* background: white; */
+        position: absolute;
+        top: 90%;
+        /* opacity: .0; */
+"> <!-- MARK: footer start -->
+      <div class="inner" style="
+      height: 10%;
+      width: 100%;
+      background: white;
+      z-index: 133;
+      position: absolute;
+      top: 90%;
+      position: fixed;
+"></div>
+          </div>
+
         <div class="row">
           <div class="col-lg-8 col-md-7 col-sm-12 slide-show"> <!-- MARK: slide-show block start-->
             <div class= "interlayer-top hidden-sm hidden-xs" style = "height: 2.9%;"></div>
-            <button type = "button" class ="btn btn-close-mob hidden-md hidden-lg" id = "close_btn_mob"></button> <!--for mobile-->
+            <div class="pagination-mobile hidden-md hidden-lg"> <!--WARNING: Pagination mobile only start-->
+                <p>
+                  <span class="hidden-md hidden-lg">1/10</span>
+                </p>
+            </div> <!--WARNING: Pagination mobile only end-->
+            <button type = "button" class ="btn btn-close-mob hidden-md hidden-lg" id = "close_btn_mob"></button> <!--WARNING: button close mobile only start-->
             <div class="carousel" >
               <!-- Wrapper for slides -->
               <div class="carousel-inner" role="listbox">
                 <div class="item active">
                   <img src="assets/images/photo1.jpg" id= "img" alt="..." class="center-block">
-                  <div class="carousel-caption">
+                  <div class="carousel-caption hidden-sm hidden-xs">
                     <!-- <img src="assets/images/pinterest.png" alt=""> -->
                   </div>
                 </div>
@@ -75,7 +99,7 @@
                 <div  class= "thumb-block hidden-sm hidden-xs">
                   <button type="button" name="button" class = " btn-thumb pull-left hidden-sm hidden-xs"></button>
                   <span class="pull-left hidden-sm hidden-xs">Thumbnails</span>
-                  <span class="pull-right hidden-sm hidden-xs">1/10</span> <!-- Pagination desctop only-->
+                  <span class="pull-right hidden-sm hidden-xs">1/10</span> <!-- Pagination desktop only-->
                 </div>
                 <div class="text-block">
                   <div class="text">
@@ -110,10 +134,10 @@
           </div>
         </div> <!-- MARK: slide-show block end-->
         </div>
-          <footer class="footer hidden-sm hidden-xs"> <!-- MARK: footer start -->
-              <div class = "wrapper hidden-sm hidden-xs">
+          <footer class="footer"> <!-- MARK: footer start -->
+              <div class = "wrapper ">
                 <div class= "interlayer-top hidden-sm hidden-xs" style = "height: 30%;"></div>
-                <img src="assets/images/text-footer.png" alt="" class="text-left hidden-sm hidden-xs" />
+                <img src="assets/images/text-footer.png" alt="" class="text-left " />
                 <div class= "interlayer-bottom hidden-sm hidden-xs" style = "height: 30%;"></div>
               </div>
           </footer> <!-- MARK: footer end -->

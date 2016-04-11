@@ -102,7 +102,7 @@ body {
     }     // MARK: navbar for full-screen end
 
     .wrapper {
-      height: 86.1%;
+    
       border-bottom: 1px solid  #3d3d3d;
       .row {
         height: 100%;
@@ -113,11 +113,33 @@ body {
     .slide-show { // MARK: slide-show start
       background: @black-bg;
 
+      .pagination-mobile {
+        min-width: 54px;
+        min-height: 30px;
+        background: #3b3b3b;
+        z-index: 2;
+        opacity: 0.5;
+        position: absolute;
+        left: 10%;
+        p {
+          z-index: 1;
+          margin-bottom: 0px;
+          position: relative;
+          min-width: 54px;
+          min-height: 30px;
+          span {
+            position: absolute;
+            color: white;
+            top: 18%;
+            left: 22%;
+          }
+        }
+      }
       .btn-close-mob {
         position: absolute;
-        right: 3.2%;
+        right: 10%;
         top: 0;
-        width: 3.8%;        
+        width: 3.8%;
         min-width: 54px;
         min-height: 54px;
         background: url('../images/close-btn.png');
