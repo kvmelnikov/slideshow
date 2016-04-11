@@ -20,7 +20,7 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-
+  
   <body>
   <nav class="navbar navbar-inverse">   <!-- MARK:not fullscreen start-->
     <div class="container">
@@ -55,9 +55,9 @@
               <!-- Wrapper for slides -->
               <div class="carousel-inner" role="listbox">
                 <div class="item active">
-                  <img src="assets/images/photo1.jpg" alt="..." class="center-block">
+                  <img src="assets/images/photo1.jpg" id= "img" alt="..." class="center-block">
                   <div class="carousel-caption">
-                    <img src="assets/images/pinterest.png" alt="">
+                    <!-- <img src="assets/images/pinterest.png" alt=""> -->
                   </div>
                 </div>
               </div>
@@ -90,7 +90,9 @@
                   </p>
                 </div>
                 <div class="white-square-block"> <!-- MARK: white-square-block start -->
-
+                  <div class="square">
+                    <span>AD</span>
+                  </div>
                 </div> <!-- MARK: white-square-block end -->
               </div><!-- MARK:main-block end-->
               <ul class="social-block">
@@ -117,14 +119,20 @@
     $('#close_btn').click(function () {
       screenfull.exit();
     });
+    var img = document.getElementById("img");
+    img.addLis
+    console.log(img.height,img.width);
 
     $('#toggle').click(function () {
       screenfull.toggle($('#fs_section')[0]);
     });
-
     // set the initial values
-    fullscreenchange();
+
   });
+
+  </script>
+
+  <script type="text/javascript">
 
   </script>
 
