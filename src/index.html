@@ -20,7 +20,7 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-  
+
   <body>
   <nav class="navbar navbar-inverse">   <!-- MARK:not fullscreen start-->
     <div class="container">
@@ -38,19 +38,20 @@
  </div><!-- MARK: /.container -->  <!-- MARK:not fullscreen end -->
 
   <div class="fs_section" id="fs_section"> <!-- MARK: fullscreen start-->
-      <nav class="navbar">
-        <div class="wrapper">
-          <div class="header">
-            AD
+      <nav class="navbar hidden-sm hidden-xs">
+        <div class="wrapper hidden-sm hidden-xs">
+          <div class="header hidden-sm hidden-xs">
+            <p class = "text">AD</p>
           </div>
-        <button type = "button" class ="btn btn-close" id = "close_btn"></button>
+        <button type = "button" class ="btn btn-close hidden-sm hidden-xs" id = "close_btn"></button> <!--for medium monitor-->
         </div>
-
       </nav> <!-- MARK:/.nav-collapse -->
       <button type = "button" class ="btn btn-success center-block" id = "toggle">Start Slide Show</button>
       <div class="wrapper">
         <div class="row">
           <div class="col-lg-8 col-md-7 col-sm-12 slide-show"> <!-- MARK: slide-show block start-->
+            <div class= "interlayer-top hidden-sm hidden-xs" style = "height: 2.9%;"></div>
+            <button type = "button" class ="btn btn-close-mob hidden-md hidden-lg" id = "close_btn_mob"></button> <!--for mobile-->
             <div class="carousel" >
               <!-- Wrapper for slides -->
               <div class="carousel-inner" role="listbox">
@@ -65,29 +66,33 @@
                 <a class="left carousel-control" href="#" ></a>
                 <a class="right carousel-control" href="#"></a>
               </div>
+              <div class= "interlayer-bottom hidden-sm hidden-xs" style = "height: 2.9%;"></div>
+
           </div>
           <div class="col-lg-4 col-md-5 col-sm-12 panel-wrapper">
             <div class="right-panel pull-right">
               <div class = "main-block"> <!-- MARK:main-block start-->
-                <div  class= "thumb-block">
-                  <button type="button" name="button" class = " btn-thumb pull-left"></button>
-                  <span class="pull-left">Thumbnails</span>
-                  <span class="pull-right">1/10</span>
+                <div  class= "thumb-block hidden-sm hidden-xs">
+                  <button type="button" name="button" class = " btn-thumb pull-left hidden-sm hidden-xs"></button>
+                  <span class="pull-left hidden-sm hidden-xs">Thumbnails</span>
+                  <span class="pull-right hidden-sm hidden-xs">1/10</span> <!-- Pagination desctop only-->
                 </div>
                 <div class="text-block">
-                  <p class="text-left first-text">
-                    Fake It Until You Make It: Eyes That
-                    Pop And Lips That Attracts
-                  </p>
-                  <p class="text-left second-text">
-                     Through all of our handy beauty products,
-                     we enhance and improve upon our features that we were born with,
-                     and play up the ones that we wish had a bit more prominence.
-                     So that saying “fake it until you make it” can really ring true in the beauty world
-                  </p>
-                  <p class="text-left third-text">
-                    Photo: / Pascal Le Segretain/Getty Images
-                  </p>
+                  <div class="text">
+                    <p class="text-left first-text">
+                      Fake It Until You Make It: Eyes That
+                      Pop And Lips That Attracts
+                    </p>
+                    <p class="text-left second-text">
+                       Through all of our handy beauty products,
+                       we enhance and improve upon our features that we were born with,
+                       and play up the ones that we wish had a bit more prominence.
+                       So that saying “fake it until you make it” can really ring true in the beauty world
+                    </p>
+                    <p class="text-left third-text">
+                      Photo: / Pascal Le Segretain/Getty Images
+                    </p>
+                  </div>
                 </div>
                 <div class="white-square-block"> <!-- MARK: white-square-block start -->
                   <div class="square">
@@ -95,21 +100,23 @@
                   </div>
                 </div> <!-- MARK: white-square-block end -->
               </div><!-- MARK:main-block end-->
-              <ul class="social-block">
-                <li class = "pin"><a href="#"></a></li>
-                <li class= "fb"><a href="#"></a></li>
-                <li class ="tw"><a href="#"></a></li>
-                <li class = "google"><a href="#"></a></li>
+              <ul class="social-block hidden-sm hidden-xs">
+                <li class = "pin hidden-sm hidden-xs"><a href="#"></a></li>
+                <li class= "fb hidden-sm hidden-xs"><a href="#"></a></li>
+                <li class ="tw hidden-sm hidden-xs"><a href="#"></a></li>
+                <li class = "google hidden-sm hidden-xs"><a href="#"></a></li>
               </ul><!-- MARK:social block end -->
             </div><!-- MARK: right-panel block -->
           </div>
         </div> <!-- MARK: slide-show block end-->
         </div>
-        <footer class="footer"> <!-- MARK: footer start -->
-            <div class = "wrapper">
-              <img src="assets/images/text-footer.png" alt="" class="text-left" />
-            </div>
-        </footer> <!-- MARK: footer end -->
+          <footer class="footer hidden-sm hidden-xs"> <!-- MARK: footer start -->
+              <div class = "wrapper hidden-sm hidden-xs">
+                <div class= "interlayer-top hidden-sm hidden-xs" style = "height: 30%;"></div>
+                <img src="assets/images/text-footer.png" alt="" class="text-left hidden-sm hidden-xs" />
+                <div class= "interlayer-bottom hidden-sm hidden-xs" style = "height: 30%;"></div>
+              </div>
+          </footer> <!-- MARK: footer end -->
   </div> <!-- MARK: fullscreen end-->
 
   <script src="assets/vendors/jquery/dist/jquery.min.js"></script>
@@ -117,6 +124,9 @@
     <script type="text/javascript">
   $(function () {
     $('#close_btn').click(function () {
+      screenfull.exit();
+    });
+    $('#close_btn_mob').click(function () {
       screenfull.exit();
     });
     var img = document.getElementById("img");

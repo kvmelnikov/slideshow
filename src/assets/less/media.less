@@ -1,35 +1,76 @@
 /* Extra small devices (phones, less than 768px) */
 /* No media query since this is the default in Bootstrap */
-// @media (max-width: 768px) { ... }
-//
+
+@media (max-width: 768px) {
+html {
+  body {
+    .fs_section:-webkit-full-screen {
+      .panel-wrapper {
+        .right-panel {
+          .main-block {
+            width: 100%;
+          }
+        }
+      }
+    }
+  .carousel-inner>.item>a>img, .carousel-inner>.item>img, .img-responsive, .thumbnail a>img, .thumbnail>img {
+    max-height: 75%;
+  }
+  .carousel-inner>.item>a>img, .carousel-inner>.item>img, .img-responsive, .thumbnail a>img, .thumbnail>img {
+    max-width: 86%;
+  }
+}
+}
+ }
+
 // /* Small devices (tablets, 768px and up) */
-// @media (min-width: 768px) { ... }
+ @media (min-width: 768px) {
+html {
+  body {
+    .fs_section:-webkit-full-screen {
+      .panel-wrapper {
+        .right-panel {
+          .main-block {
+            width: 100%;
+          }
+        }
+      }
+    }
+    .carousel-inner>.item>a>img, .carousel-inner>.item>img, .img-responsive, .thumbnail a>img, .thumbnail>img {
+      max-height: 75%;
+    }
+    .carousel-inner>.item>a>img, .carousel-inner>.item>img, .img-responsive, .thumbnail a>img, .thumbnail>img {
+      max-width: 86%;
+    }
+
+  }
+}
+
+ }
 //
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) {
   html {
     body {
       .fs_section:-webkit-full-screen {
-        .right-panel {
-           height: 86.1%;
-
-          .main-block{
-            height: 62.6450116009281%;
-            width: 90%;
+        .panel-wrapper {
+          .right-panel {
+            .main-block {
+              width: 90%;
+            }
           }
-          .white-square-block {
-
-          }
-
         }
         .slide-show {
             padding-left: 45px;
             height: 100%;
           .carousel-inner>.item>a>img, .carousel-inner>.item>img, .img-responsive, .thumbnail a>img, .thumbnail>img {
+              max-height: 100%;
+            }
+          .carousel-inner>.item>a>img, .carousel-inner>.item>img, .img-responsive, .thumbnail a>img, .thumbnail>img {
             max-width: 100%;
           }
           .carousel {
-            margin-top: 0px;
+
           }
 
         }
@@ -44,28 +85,56 @@
   html {
     body {
       .fs_section:-webkit-full-screen {
-        .right-panel {
-           height: 86.1%;
 
-          .main-block{
-            height: 62.6450116009281%;
-            width: 90%;
+        .panel-wrapper {
+          .right-panel {
+            .main-block {
+              width: 90%;
+            }
           }
-          .white-square-block {
-
-          }
-
         }
         .slide-show {
             padding-left: 45px;
             height: 100%;
-          .carousel-inner>.item>a>img, .carousel-inner>.item>img, .img-responsive, .thumbnail a>img, .thumbnail>img {
-            max-width: 100%;
-          }
+            .carousel-inner>.item>a>img, .carousel-inner>.item>img, .img-responsive, .thumbnail a>img, .thumbnail>img {
+                max-height: 100%;
+              }
+            .carousel-inner>.item>a>img, .carousel-inner>.item>img, .img-responsive, .thumbnail a>img, .thumbnail>img {
+              max-width: 100%;
+            }
           .carousel {
-            margin-top: 0px;
           }
+        }
+      }
+    }
+  }
+}
+@media (min-width: 1399px) { // for the panel to the right for larger screens
+  html {
+    body {
+      .fs_section:-webkit-full-screen {
+        .panel-wrapper {
+          .right-panel {
+            .main-block {
+              width: 91%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
 
+@media (min-width: 1910px) { // for the panel to the right for larger screens
+  html {
+    body {
+      .fs_section:-webkit-full-screen {
+        .panel-wrapper {
+          .right-panel {
+            .main-block {
+              width: 94%;
+            }
+          }
         }
 
       }

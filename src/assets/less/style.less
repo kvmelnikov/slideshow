@@ -55,9 +55,6 @@ body {
     overflow-y: auto;
     overflow-x: hidden;
 
-
-
-
     .btn-success {
       display: none;
     }
@@ -75,13 +72,22 @@ body {
                 width: 52%;
                 height: 100%;
                 font: normal 0.5em/1em AvenirNextLTPro-Bold;
+                position: relative;
+                .text {
+                  position: absolute;
+                  top: 50%;
+                  left: 50%;
+                  font: 14px/26px AvenirNextLTPro-Bold;
+
+                }
+
               }
 
               .btn-close {
                 position: absolute;
-                right: 1.28571428571429%;
-                top: 17.7777777777778%;
-                width: 3.85714285714286%;
+                right: 1.2%;
+                top: 17.7%;
+                width: 3.8%;
                 height: 60%;
                 min-width: 54px;
                 min-height: 54px;
@@ -97,26 +103,41 @@ body {
 
     .wrapper {
       height: 86.1%;
+      border-bottom: 1px solid  #3d3d3d;
       .row {
         height: 100%;
-
       }
+
     }
 
     .slide-show { // MARK: slide-show start
       background: @black-bg;
 
+      .btn-close-mob {
+        position: absolute;
+        right: 3.2%;
+        top: 0;
+        width: 3.8%;        
+        min-width: 54px;
+        min-height: 54px;
+        background: url('../images/close-btn.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        opacity: .5;
+        z-index: 100;
+      }
+
       .carousel {
-        height: 100%;
+        height: 94.1%;
         display: block;
 
         .carousel-inner {
           height: 100%;
         }
 
-
         .carousel-control {
-          width: 58px;
+          width: 59px;
+          opacity: 1;
 
           &.left {
             background: url('../images/left-arrow.png');
@@ -162,7 +183,7 @@ body {
 
       .thumb-block {
         position: absolute;
-        top: 3.3%;
+        top: 30px;
         left: 8%;
         right: 8%;
         height: 7.7%;
@@ -187,34 +208,35 @@ body {
           border-bottom: 1px solid #1e1e1e;
           height: 62.7%;
 
+          .text {
+            position: absolute;
 
-        .first-text {
-          font: 18px/22px AvenirNextLTPro-Bold;
-          position: absolute;
-          top: 9%;
-          left: 8%;
-          right:8%;
+            .first-text {
+              font: 18px/22px AvenirNextLTPro-Bold;
+              margin-top: 78px;
+              margin-bottom: 25px;
+              padding: 0 8% 0 8%;
 
-        }
+            }
 
-        .second-text {
-          font: 14px/22px AvenirNextLTPro-Regular;
-          position: absolute;
-          top: 16.6%;
-          left: 8%;
-          right:8%;
-          max-height: 140px;
-          overflow-y: auto;
+            .second-text {
+              font: 14px/22px AvenirNextLTPro-Regular;
+              margin-bottom: 25px;
+              padding: 0 8% 0 8%;
 
-        }
 
-        .third-text {
-          font: 11px/12px AvenirNextLTPro-Regular;
-          position: absolute;
-          top: 34.37%;
-          left: 8%;
-          right:8%;
-        }
+            }
+
+            .third-text {
+              font: 11px/12px AvenirNextLTPro-Regular;
+              padding: 0 8% 0 8%;
+
+            }
+
+          }
+
+
+
       }
 
 
@@ -274,15 +296,22 @@ body {
           top: 50%;
           right: 50%;
           color: black;
+          font: 14px/26px AvenirNextLTPro-Bold;
         }
       }
-
     } // MARK: white-square-block end
 
   }} // MARK: right panel end
 
   .footer { // MARK: footer start
       border-top: 1px solid #3d3d3d;
+      background: @bottom-bg;
+      height: 4.9%;
+      .wrapper {
+        img {
+          margin-left: 16px;
+        }
+      }
 
   } // MARK: footer end
 
