@@ -72,6 +72,20 @@ This must be run when you have at least 2 sprites.
   html body .fs_section:-webkit-full-screen .wrapper {
     height: 100%;
   }
+  html body .fs_section:-webkit-full-screen .wrapper .panel-support-mobile {
+    height: 23%;
+    width: 100%;
+    position: absolute;
+    top: 78%;
+  }
+  html body .fs_section:-webkit-full-screen .wrapper .panel-support-mobile .inner {
+    height: 23%;
+    width: 100%;
+    border-top: 1px solid #3d3d3d;
+    background: #292929;
+    z-index: 133;
+    position: fixed;
+  }
   html body .fs_section:-webkit-full-screen .slide-show .carousel .carousel-control.left {
     left: 5%;
   }
@@ -97,8 +111,25 @@ This must be run when you have at least 2 sprites.
   }
 }
 @media (min-width: 768px) {
+  html body .fs_section:-webkit-full-screen .navbar .header .wrapper {
+    width: 100%;
+  }
   html body .fs_section:-webkit-full-screen .wrapper {
-    height: 100%;
+    height: 91%;
+  }
+  html body .fs_section:-webkit-full-screen .wrapper .panel-support-mobile {
+    height: 23%;
+    width: 100%;
+    position: absolute;
+    top: 77%;
+  }
+  html body .fs_section:-webkit-full-screen .wrapper .panel-support-mobile .inner {
+    height: 10%;
+    width: 100%;
+    border-top: 1px solid #3d3d3d;
+    background: #292929;
+    z-index: 133;
+    position: fixed;
   }
   html body .fs_section:-webkit-full-screen .slide-show .carousel .carousel-control.left {
     left: 10%;
@@ -126,6 +157,9 @@ This must be run when you have at least 2 sprites.
 }
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) {
+  html body .fs_section:-webkit-full-screen .navbar .header .wrapper {
+    width: 52%;
+  }
   html body .fs_section:-webkit-full-screen .wrapper {
     height: 86.1%;
   }
@@ -159,6 +193,9 @@ This must be run when you have at least 2 sprites.
 }
 /* Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
+  html body .fs_section:-webkit-full-screen .navbar .header .wrapper {
+    width: 52%;
+  }
   html body .fs_section:-webkit-full-screen .wrapper {
     height: 86.1%;
   }
@@ -219,6 +256,84 @@ body .wrapper {
   margin: auto;
   position: relative;
 }
+body .wrapper .panel-support-mobile {
+  height: 23%;
+  width: 100%;
+  position: absolute;
+  top: 78%;
+}
+body .wrapper .panel-support-mobile .inner {
+  height: 23%;
+  width: 100%;
+  border-top: 1px solid #3d3d3d;
+  background: #292929;
+  z-index: 133;
+  position: fixed;
+}
+body .wrapper .panel-support-mobile .inner .wrapper-menu {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+body .wrapper .panel-support-mobile .inner .wrapper-menu .menu-soc {
+  height: 60%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  background: yellow;
+}
+body .wrapper .panel-support-mobile .inner .wrapper-menu .menu-soc ul {
+  list-style-type: none;
+  width: 100%;
+  height: 100%;
+  padding-left: 0px;
+  text-align: center;
+  position: absolute;
+  top: 21%;
+}
+body .wrapper .panel-support-mobile .inner .wrapper-menu .menu-soc ul li {
+  display: inline-block;
+  margin: 0 2%;
+}
+body .wrapper .panel-support-mobile .inner .wrapper-menu .menu-soc ul .pin {
+  width: 17%;
+  height: 58%;
+  background: url('../images/pin-mob.png');
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+body .wrapper .panel-support-mobile .inner .wrapper-menu .menu-soc ul .fb {
+  width: 17%;
+  height: 58%;
+  background: url('../images/fb-mob.png');
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+body .wrapper .panel-support-mobile .inner .wrapper-menu .menu-soc ul .google {
+  width: 17%;
+  height: 58%;
+  background: url('../images/g-mob.png');
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+body .wrapper .panel-support-mobile .inner .wrapper-menu .menu-soc ul .tw {
+  width: 17%;
+  height: 58%;
+  background: url('../images/tw-mob.png');
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+body .wrapper .panel-support-mobile .inner .wrapper-menu .menu-button {
+  height: 40%;
+  width: 100%;
+  position: absolute;
+  top: 60%;
+  background: green;
+}
 body .btn {
   border-radius: 0;
 }
@@ -256,7 +371,6 @@ body .fs_section:-webkit-full-screen .navbar .wrapper {
 body .fs_section:-webkit-full-screen .navbar .wrapper .header {
   background: #7f7f7f;
   margin: auto;
-  width: 52%;
   height: 100%;
   font: normal 0.5em/1em AvenirNextLTPro-Bold;
   position: relative;
