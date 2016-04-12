@@ -33,7 +33,6 @@ body {
         height: 23%;
         width: 100%;
         border-top: 1px solid #3d3d3d;
-        background: #292929;
         z-index: 133;
         position: fixed;
 
@@ -47,8 +46,6 @@ body {
             width: 100%;
             position: absolute;
             top: 0;
-            background: yellow;
-
               ul {
                 list-style-type: none;
                 width: 100%;
@@ -97,10 +94,7 @@ body {
                   background-position: center center;
                   background-repeat: no-repeat;
                 }
-
-
               }
-
           }
           .menu-button {
             height: 40%;
@@ -110,6 +104,26 @@ body {
             background: green;
           }
         }
+      .wrapper-menu::after {  // background for soc block
+          content: "";
+
+  background: rgba(241,111,92,1);
+  background: -moz-linear-gradient(top, rgba(241,111,92,1) 0%, rgba(246,41,12,1) 0%, rgba(240,47,23,1) 0%, rgba(39,39,39,1) 0%, rgba(39,39,39,0.41) 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(241,111,92,1)), color-stop(0%, rgba(246,41,12,1)), color-stop(0%, rgba(240,47,23,1)), color-stop(0%, rgba(39,39,39,1)), color-stop(100%, rgba(39,39,39,0.41)));
+  background: -webkit-linear-gradient(top, rgba(241,111,92,1) 0%, rgba(246,41,12,1) 0%, rgba(240,47,23,1) 0%, rgba(39,39,39,1) 0%, rgba(39,39,39,0.41) 100%);
+  background: -o-linear-gradient(top, rgba(241,111,92,1) 0%, rgba(246,41,12,1) 0%, rgba(240,47,23,1) 0%, rgba(39,39,39,1) 0%, rgba(39,39,39,0.41) 100%);
+  background: -ms-linear-gradient(top, rgba(241,111,92,1) 0%, rgba(246,41,12,1) 0%, rgba(240,47,23,1) 0%, rgba(39,39,39,1) 0%, rgba(39,39,39,0.41) 100%);
+  background: linear-gradient(to bottom, rgba(241,111,92,1) 0%, rgba(246,41,12,1) 0%, rgba(240,47,23,1) 0%, rgba(39,39,39,1) 0%, rgba(39,39,39,0.41) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f16f5c', endColorstr='#272727', GradientType=0 );
+          opacity: 0.7;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          right: 0;
+          position: absolute;
+          z-index: -1;
+        }
+
       }
     }
   }
