@@ -25,7 +25,7 @@
   </head>
 
   <body>
-  <nav class="navbar navbar-inverse">   <!-- MARK:not fullscreen start-->
+  <nav class="navbar navbar-inverse" id = "nav">   <!-- MARK:not fullscreen start-->
     <div class="container">
       <div class="navbar-header">
         <a class="navbar-brand" href="#">Slide Show</a>
@@ -83,12 +83,10 @@
               <!-- Wrapper for slides -->
               <div class="carousel-inner" role="listbox">
                 <div class="item active">
-                  
-                  <img src="assets/images/photo1.jpg" id= "img" alt="..." class="center-block">
-                  <!-- <img src="assets/images/pinterest.png" alt=""> -->
 
-                  <div class="carousel-caption hidden-sm hidden-xs">
-                  </div>
+                  <img src="assets/images/photo1.jpg" id= "img" alt="..." class="center-block">
+
+        
                 </div>
               </div>
                 <!-- Controls -->
@@ -168,6 +166,9 @@
     });
     // full-screen end
 
+    // $( "#log" ).append( "<div>Handler for .resize() called.</div>" );
+
+
     // menu social for mobile version
     var show;
     function hideMenuSoc() {
@@ -188,6 +189,10 @@
        delClassActiveFromBtnShare();
        show = false;
      }
+    // pin add in image
+
+
+
    });
 
     //  $( "#button" ).click(function(){
