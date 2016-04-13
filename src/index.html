@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
     <title>Slide Show</title>
     <link rel="stylesheet" href="assets/vendors/bootstrap/dist/css/bootstrap.min.css" media="screen" title="no title" charset="utf-8">
     <!-- MARK: IE10 viewport hack for Surface/desktop Windows 8 bug -->
@@ -51,15 +54,19 @@
         <div class="panel-support-mobile hidden-md hidden-lg"> <!--WARNING: only mobile version  start-->
           <div class="inner hidden-md hidden-lg">
               <div class = "wrapper-menu">
-                  <div class="menu-soc">
+                  <div class="menu-soc" id = "menu-soc" style="display:none;">
                       <ul>
                         <li class = "pin"><a href="#"></a></li>
                         <li class = "fb"><a href="#"></a></li>
                         <li class = "google"><a href="#"></a></li>
-                        <li class = "tw"><a href="#"></a></li>                        
+                        <li class = "tw"><a href="#"></a></li>
                       </ul>
                   </div>
-                  <div class="menu-button"></div>
+                  <div class="menu-button">
+                    <div>
+                      <a href="#" id="button-share"><span class="share-btn"></span></a> <a href="#"><span class="thumb-btn"></span></a>
+                    </div>
+                  </div>
               </div>
         </div>
       </div>  <!--WARNING: only mobile version  end-->
@@ -76,9 +83,11 @@
               <!-- Wrapper for slides -->
               <div class="carousel-inner" role="listbox">
                 <div class="item active">
+                  
                   <img src="assets/images/photo1.jpg" id= "img" alt="..." class="center-block">
+                  <!-- <img src="assets/images/pinterest.png" alt=""> -->
+
                   <div class="carousel-caption hidden-sm hidden-xs">
-                    <!-- <img src="assets/images/pinterest.png" alt=""> -->
                   </div>
                 </div>
               </div>
@@ -87,7 +96,6 @@
                 <a class="right carousel-control" href="#"></a>
               </div>
               <div class= "interlayer-bottom hidden-sm hidden-xs" style = "height: 2.9%;"></div>
-
           </div>
           <div class="col-lg-4 col-md-5 col-sm-12 panel-wrapper">
             <div class="right-panel pull-right">
@@ -130,8 +138,8 @@
           </div>
         </div> <!-- MARK: slide-show block end-->
         </div>
-          <footer class="footer"> <!-- MARK: footer start -->
-              <div class = "wrapper ">
+          <footer class="footer hidden-sm hidden-xs"> <!-- MARK: footer start -->
+              <div class = "wrapper hidden-sm hidden-xs">
                 <div class= "interlayer-top hidden-sm hidden-xs" style = "height: 30%;"></div>
                 <img src="assets/images/text-footer.png" alt="" class="text-left " />
                 <div class= "interlayer-bottom hidden-sm hidden-xs" style = "height: 30%;"></div>
@@ -147,9 +155,12 @@
     //  full-screen start
     $('#close_btn').click(function () {
       screenfull.exit();
+      hideMenuSoc();
+
     });
     $('#close_btn_mob').click(function () {
       screenfull.exit();
+      hideMenuSoc();
     });
 
     $('#toggle').click(function () {
@@ -158,14 +169,38 @@
     // full-screen end
 
     // menu social for mobile version
-    var options = {};
-    $( "#button" ).click(function() {
-      $( "#menu-soc" ).show( "clip", options, 500);
+    var show;
+    function hideMenuSoc() {
+      $( "#menu-soc" ).hide();
+    }
+    function addClassForBtnShare() {
+      $( ".share-btn" ).addClass( "active" );
+    }
+    function delClassActiveFromBtnShare() {
+      $( ".share-btn" ).removeClass("active");
+    }
+    $( "#button-share" ).click(function() {
+      if(show != true){
+      $( "#menu-soc" ).show( "clip", addClassForBtnShare() );
+      show = true;
+    } else {
+       hideMenuSoc();
+       delClassActiveFromBtnShare();
+       show = false;
+     }
+   });
+
+    //  $( "#button" ).click(function(){
+    //  $( ".newClass" ).switchClass( "newClass", "anotherNewClass", 1000 );
+    //  $( ".anotherNewClass" ).switchClass( "anotherNewClass", "newClass", 1000 );
+ // });
+
    });
     //menu social for mobile version
 
 
-  });
+
+
 
   </script>
 
